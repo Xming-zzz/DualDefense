@@ -1,9 +1,9 @@
 import torch
 import torch.nn as nn
 from adv import Adversary_Init
-from encoder_fs160 import ResNetUNet
-from decoder_fs160 import Decoder
-from faceswap_pytorch.models_160 import Autoencoder
+from encoder_fs import ResNetUNet
+from decoder_fs import Decoder
+from faceswap_pytorch.models import Autoencoder
 
 
 class DualDefense(nn.Module):
