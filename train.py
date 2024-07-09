@@ -485,7 +485,7 @@ if mode == 'train':
 PATH_1 = os.path.join(SAVE_PATH, args.name)
 LOAD_PATH = os.path.join(PATH_1, date + ckpt_final)
 # LOAD_PATH = '/faketagger/FT-new/result/save/ckpt-new/0510_3_32_1_01_final.pt'  # gan-best
-model = FaceTagger(args.message_size, in_channels=3, device=device)
+model = DualDefense(args.message_size, in_channels=3, device=device)
 model.encoder.load_state_dict(torch.load(LOAD_PATH)['encoder'])
 model.decoder.load_state_dict(torch.load(LOAD_PATH)['decoder'])
 
